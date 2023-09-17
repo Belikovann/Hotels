@@ -9,6 +9,16 @@ import SwiftUI
 
 struct BookingView: View {
     
+    var data: [(String, String)] = [
+            ("Вылет из","Значение 1"),
+            ("Страна, город", "Значение 2"),
+            ("Даты", "Значение 3"),
+            ("Кол-во ночей", "Значение 4"),
+            ("Отель", "Значение 5"),
+            ("Номер", "Значение 6"),
+            ("Питание", "значение 7")
+            ]
+    
     var body: some View {
         NavigationStack {
             
@@ -18,10 +28,12 @@ struct BookingView: View {
                     NameAndAddressView()
                 }
                 
+                
+            }
+            
             }
         }
     }
-}
 
 struct BookingView_Previews: PreviewProvider {
     static var previews: some View {
