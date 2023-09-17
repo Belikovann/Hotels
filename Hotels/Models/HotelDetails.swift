@@ -40,7 +40,7 @@ enum HotelDetailsApi {
 extension HotelDetails {
     enum CodingKeys: String, CodingKey {
         case id = "ID"
-        case name = ""
+        case name = "Name"
         case adress = "Adress"
         case minimalPrice = "Minimal_price"
         case priceForIt = "Price_of_it"
