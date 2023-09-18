@@ -28,9 +28,7 @@ struct BookingView: View {
                     NameAndAddressView()
                 }
                 
-                
             }
-            
             }
         }
     }
