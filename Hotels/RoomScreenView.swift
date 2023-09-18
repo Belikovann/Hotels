@@ -8,7 +8,9 @@
 import SwiftUI
 
 
-struct RoomView: View {
+struct RoomScreenView: View {
+    
+    @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
         NavigationStack {
@@ -29,6 +31,6 @@ struct RoomView: View {
 struct RoomView_Previews: PreviewProvider {
     
     static var previews: some View {
-        RoomView()
+        RoomScreenView()
     }
 }

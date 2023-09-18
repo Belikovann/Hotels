@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SuccessfulPaidView: View {
+struct OrderScreenView: View {
     
     var body: some View {
         VStack(alignment: .center) {
@@ -38,7 +38,7 @@ struct SuccessfulPaidView: View {
 
 struct SuccessfulPaidView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessfulPaidView()
+        OrderScreenView()
     }
 }
 

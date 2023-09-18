@@ -8,8 +8,14 @@
 import Foundation
 
 
-struct Client: Codable {
+struct Client: Decodable {
     
     var phone = ""
-    var email = "" 
+    var email = ""
+    var name = ""
+    var surname = ""
+    var dataOfBirth = ""
+    var citizenship = ""
+    var passportNumber = ""
+    var dateOfpassport = "" 
 }
