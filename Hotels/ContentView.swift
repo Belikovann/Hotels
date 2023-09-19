@@ -11,12 +11,21 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var coordinator: Coordinator
+    @EnvironmentObject var clientManager: ClientManager
 
+    
         var body: some View {
-            if coordinator.isRoomScreenPresented {
-                RoomScreenView()
-            } else {
-                HotelListScreenView()
+            NavigationView{
+                switch coordinator.currentScreen {
+                case .hotels:
+                    HotelListScreenView()
+                case .rooms:
+                    RoomScreenView()
+                case .booking:
+                    BookingScreenView()
+                case .order:
+                    OrderScreenView()
+                }
             }
         }
     }
@@ -27,5 +36,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(Coordinator())
+            .environmentObject(ClientManager())
     }
 }

@@ -38,7 +38,7 @@ struct PayBlock: View {
                 Text("К оплате")
                     .foregroundColor(.gray)
                 Spacer()
-                Text("\(tourPrice)" + "\(rubleSymbol)")
+                Text("\(tourPrice + fuelPrice + servicePrice)" + "\(rubleSymbol)")
                     .foregroundColor(.accentColor)
             }
         }

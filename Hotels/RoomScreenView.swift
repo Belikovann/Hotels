@@ -14,16 +14,30 @@ struct RoomScreenView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                Section {
-                    RoomCellView()
+            
+           
+                List {
+                    Section {
+                        RoomCellView()
+                    }
+                    Section {
+                        RoomCellView()
+                    }
                 }
-                Section {
-                    RoomCellView()
-                }
+                .listStyle(.plain)
+                .navigationTitle("Название отеля")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    leading:
+                        Button(action: {
+                            coordinator.navigateBack()
+                        }) {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(.black)
+                        }
+            )
             }
-            .listStyle(.automatic)
-        }
+        
     }
 }
 

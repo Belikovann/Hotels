@@ -11,11 +11,13 @@ import SwiftUI
 struct HotelsApp: App {
     
     @StateObject var coordinator = Coordinator()
+    @StateObject var clientManager = ClientManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(coordinator)
+                .environmentObject(clientManager)
         }
     }
 }

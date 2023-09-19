@@ -9,14 +9,22 @@ import SwiftUI
 
 class Coordinator: ObservableObject {
     
-    @Published var isRoomScreenPresented = false
+    @Published var currentScreen: Screens = Screens.hotels
     
-    func presentRoomScreen() {
-        isRoomScreenPresented = true
+    enum Screens {
+        case hotels, rooms, booking, order
     }
     
-    func dismissRoomScreen() {
-        isRoomScreenPresented = false
-    }
+    func navigateTo(screen: Screens) {
+        currentScreen = screen
+        }
     
+    func navigateBack() {
+        switch currentScreen {
+        case .hotels: break
+        case .rooms: currentScreen = .hotels
+        case .booking: currentScreen = .rooms
+        case .order: currentScreen = .booking
+        }
+    }
 }

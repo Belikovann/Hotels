@@ -10,6 +10,7 @@ import Foundation
 
 struct Client: Decodable {
     
+    
     var phone = ""
     var email = ""
     var name = ""
@@ -17,5 +18,5 @@ struct Client: Decodable {
     var dataOfBirth = ""
     var citizenship = ""
     var passportNumber = ""
-    var dateOfpassport = "" 
+    var dateOfPassport = ""
 }

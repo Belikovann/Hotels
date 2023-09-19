@@ -10,16 +10,26 @@ import SwiftUI
 
 struct ClientView: View {
 
-    @EnvironmentObject private var clientManager: ClientManager
+    @State var client = Client()
+    @State private var phone = ""
     
     var body: some View {
         VStack(alignment: .leading) {
             Text("Информация о покупателе")
                 .font(.custom("SF Pro Display", size: 22))
                 .bold()
-            TextField("Номер телефона", text: $clientManager.client.phone)
+            TextField("+7 (XXX) XXX-XX-XX", text: $phone)
+                   .keyboardType(.numberPad)
+                   .onChange(of: phone) { newValue in
+                       if newValue.count > 12 {
+                           phone = String(newValue.prefix(12))
+                       }
+                   }
+                   .onAppear {
+                        phone = "+7"
+                               }
                 .textFieldStyle(CustomTFStyle())
-            TextField("Почта", text: $clientManager.client.email)
+            TextField("Почта", text: $client.email)
                 .textFieldStyle(CustomTFStyle())
             Text("Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту")
                 .font(.custom("SF Pro Display", size: 14))
@@ -31,13 +41,9 @@ struct ClientView: View {
 }
 
 
-
-
-
 struct ClientView_Previews: PreviewProvider {
     
     static var previews: some View {
         ClientView()
-            .environmentObject(ClientManager())
     }
 }

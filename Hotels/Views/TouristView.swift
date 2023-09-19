@@ -11,44 +11,48 @@ import SwiftUI
 struct TouristView: View {
     
     @State private var isExpanded = false
-    @EnvironmentObject private var clientManager: ClientManager
-
+    @State var tourist = Client()
+    
+    var title: String
     
     var body: some View {
         VStack {
             DisclosureGroup(
                 isExpanded: $isExpanded,
                 content: {
-                    TextField("Имя", text: $clientManager.client.name)
+                    TextField("Имя", text: $tourist.name)
                         .textFieldStyle(CustomTFStyle())
-                    TextField("Фамилия", text: $clientManager.client.surname)
+                    TextField("Фамилия", text: $tourist.surname)
                         .textFieldStyle(CustomTFStyle())
-                    TextField("Дата рождения", text: $clientManager.client.dataOfBirth)
+                    TextField("Дата рождения", text: $tourist.dataOfBirth)
                         .textFieldStyle(CustomTFStyle())
-                    TextField("Гражданство", text: $clientManager.client.citizenship)
+                    TextField("Гражданство", text: $tourist.citizenship)
                         .textFieldStyle(CustomTFStyle())
-                    TextField("Номер загранпаспорта", text: $clientManager.client.passportNumber)
+                    TextField("Номер загранпаспорта", text: $tourist.passportNumber)
                         .textFieldStyle(CustomTFStyle())
-                    TextField("Срок действия загранпаспорта", text: $clientManager.client.dateOfpassport)
+                    TextField("Срок действия загранпаспорта", text: $tourist.dateOfPassport)
                         .textFieldStyle(CustomTFStyle())
                 },
                 label: {
-                    Text("Первый турист")
-                        .foregroundColor(.black)
-                        .font(.custom("SF Pro Display", size: 22))
+                        Text("\(title)")
+                            .foregroundColor(.black)
+                            .font(.custom("SF Pro Display", size: 22))
+                            .padding(10)
                 }
             )
-            .padding()
+           
+                    }
         }
     }
-}
 
 
 struct TouristView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TouristView()
-            .environmentObject(ClientManager())
-
+        TouristView(title: "Турист")
     }
 }
+
+
+
+//chevron.up.square.fill

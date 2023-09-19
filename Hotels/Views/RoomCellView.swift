@@ -9,12 +9,12 @@ import SwiftUI
 
 struct RoomCellView: View {
     
+    @EnvironmentObject var coordinator: Coordinator
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Image(systemName: "peacesign")
-                .resizable()
-                .frame(width: 343, height: 257)
-            .cornerRadius(20)
+            GalleryView()
+                .frame(width: 300, height: 257)
             Text("Стандартный номер с видом на бассейн")
                 .font(.custom("SF Pro Display", size: 22))
             HStack {
@@ -40,7 +40,7 @@ struct RoomCellView: View {
                 .foregroundColor(.blue)
             }
             PriceView(price: "186 600", priceForIt: "За 7 ночей с перелетом")
-            ButtonView(title: "Выбрать номер", action: {})
+            ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .booking)})
         }
         
     }

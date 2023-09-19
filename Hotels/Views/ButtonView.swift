@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ButtonView: View {
     
+    @EnvironmentObject var coordinator: Coordinator 
     let title: String
     let action: () -> Void
     
@@ -29,5 +30,6 @@ struct ButtonView: View {
 struct ActionButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ButtonView(title: "Some Action", action: {})
+            .environmentObject(Coordinator())
     }
 }
