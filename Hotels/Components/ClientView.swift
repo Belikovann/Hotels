@@ -25,12 +25,16 @@ struct ClientView: View {
                            phone = String(newValue.prefix(12))
                        }
                    }
-                   .onAppear {
-                        phone = "+7"
-                               }
+//                   .onAppear {
+//                        phone = "+7"
+//                               }
                 .textFieldStyle(CustomTFStyle())
             TextField("Почта", text: $client.email)
                 .textFieldStyle(CustomTFStyle())
+                .onChange(of: client.email) { _ in }
+                .autocapitalization(.none)
+                .textContentType(.emailAddress)
+                .keyboardType(.emailAddress)
             Text("Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту")
                 .font(.custom("SF Pro Display", size: 14))
                 .foregroundColor(.gray)

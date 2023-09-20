@@ -11,11 +11,15 @@ struct FacilitiesTableView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-                FacilitiesCellView(title: "Удобства", icon: "face.smiling")
-                FacilitiesCellView(title: "Что включено", icon: "checkmark.square")
-                FacilitiesCellView(title: "Что не включено", icon: "xmark.square")
-            }
+            FacilitiesCellView(title: "Удобства", icon: "face.smiling")
+            Divider()
+            FacilitiesCellView(title: "Что включено", icon: "checkmark.square")
+            Divider()
+            FacilitiesCellView(title: "Что не включено", icon: "xmark.square")
         }
+        .background(Color(red: 251 / 255, green: 251 / 255, blue: 252 / 255, opacity: 1))
+        .cornerRadius(10)
+    }
     }
     
     
@@ -42,6 +46,7 @@ struct FacilitiesTableView: View {
                         .foregroundColor(.black)
                 }
             }
+            
         }
     }
 

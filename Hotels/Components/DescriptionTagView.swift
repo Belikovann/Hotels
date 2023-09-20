@@ -16,11 +16,14 @@ struct DescriptionTagView: View {
                     .foregroundColor(.gray)
                     .opacity(0.1)
                     .cornerRadius(10.0)
-                    .frame(height: 30)
+                    .frame(maxHeight: 40)
+                    .alignmentGuide(.leading) { _ in -20 }
             Text("\(descriptionTag)")
                 .font(.custom("SF Pro Display", size: 16))
                 .foregroundColor(.gray)
+                .padding(.leading, 20)
             }
+        .frame(maxWidth: .infinity)
         }
 }
 
