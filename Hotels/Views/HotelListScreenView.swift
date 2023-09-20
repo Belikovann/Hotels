@@ -12,26 +12,27 @@ struct HotelListScreenView: View {
     @EnvironmentObject var coordinator: Coordinator
     
     var body: some View {
-            NavigationStack {
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 10) {
-                        GalleryView()
-                            .padding()
-                        RatingView()
-                        NameAndAddressView()
-                        PriceView(price: "136 374", priceForIt: "за тур с перелетом")
-                    }
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    GalleryView()
+                        .frame(width: 300, height: 257)
+                    
+                    RatingView()
+                    NameAndAddressView()
+                    PriceView(price: "136 374", priceForIt: "за тур с перелетом")
+                    
                     AddDetailHotelView()
-                        .padding()
                 }
-                ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
-                    .padding()
-                
-                    .navigationTitle("Отель")
-                    .navigationBarTitleDisplayMode(.inline)
-                
             }
+            ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
+                .padding()
+            
+                .navigationTitle("Отель")
+                .navigationBarTitleDisplayMode(.inline)
+            
         }
+    }
 }
 
 

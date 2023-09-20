@@ -17,7 +17,6 @@ struct GalleryView: View {
     @State private var currentIndex = 0
 
     var body: some View {
-        ScrollView {
             VStack {
                 TabView(selection: $currentIndex) {
                     ForEach(images.indices, id: \.self) { index in
@@ -32,7 +31,13 @@ struct GalleryView: View {
 
                 
             }
-        }
     }
 }
 
+
+struct GalleryView_Previews: PreviewProvider{
+    
+    static var previews: some View{
+        GalleryView()
+    }
+}

@@ -19,9 +19,7 @@ struct RoomCellView: View {
                 .font(.custom("SF Pro Display", size: 22))
             HStack {
                 DescriptionTagView(descriptionTag: "Включен только завтрак")
-                    .frame(width: 200)
                 DescriptionTagView(descriptionTag: "Кондиционер")
-                    .frame(width: 110)
             }
             ZStack(alignment: .center) {
                 

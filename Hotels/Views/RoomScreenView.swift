@@ -14,8 +14,6 @@ struct RoomScreenView: View {
     
     var body: some View {
         NavigationStack {
-            
-           
                 List {
                     Section {
                         RoomCellView()

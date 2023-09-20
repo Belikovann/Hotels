@@ -11,20 +11,19 @@ struct DescriptionTagView: View {
     var descriptionTag: String
     
     var body: some View {
-        ZStack(alignment: .center) {
+        Text("\(descriptionTag)")
+            .font(.custom("SF Pro Display", size: 16))
+            .foregroundColor(.gray)
+            .padding(10)
+            .background(
                 Rectangle()
                     .foregroundColor(.gray)
                     .opacity(0.1)
-                    .cornerRadius(10.0)
-                    .frame(maxHeight: 40)
-                    .alignmentGuide(.leading) { _ in -20 }
-            Text("\(descriptionTag)")
-                .font(.custom("SF Pro Display", size: 16))
-                .foregroundColor(.gray)
-                .padding(.leading, 20)
-            }
-        .frame(maxWidth: .infinity)
-        }
+                    .frame(height: 40)
+                    .cornerRadius(10)
+            )
+            .lineLimit(1)
+    }
 }
 
 struct DescriptionTagView_Previews: PreviewProvider {
@@ -32,3 +31,4 @@ struct DescriptionTagView_Previews: PreviewProvider {
         DescriptionTagView(descriptionTag: "description")
     }
 }
+

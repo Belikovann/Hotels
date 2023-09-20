@@ -17,9 +17,10 @@ struct BookingScreenView: View {
         NavigationStack {
             ScrollView{
                 VStack(alignment: .leading, spacing: 20){
-                    
-                    RatingView()
-                    NameAndAddressView()
+                    VStack(alignment: .leading) {
+                        RatingView()
+                        NameAndAddressView()
+                    }
                     Divider()
                     BookingDetailsView()
                     Divider()
@@ -27,6 +28,7 @@ struct BookingScreenView: View {
                     TouristView(title: "Первый турист")
                     TouristView(title: "Второй турист")
                     TouristView(title: "Добавить туриста")
+                    Divider()
                     PayBlock()
                                     }
 
