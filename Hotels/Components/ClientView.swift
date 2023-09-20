@@ -18,16 +18,13 @@ struct ClientView: View {
             Text("Информация о покупателе")
                 .font(.custom("SF Pro Display", size: 22))
                 .bold()
-            TextField("+7 (XXX) XXX-XX-XX", text: $phone)
-                   .keyboardType(.numberPad)
-                   .onChange(of: phone) { newValue in
-                       if newValue.count > 12 {
-                           phone = String(newValue.prefix(12))
-                       }
-                   }
-//                   .onAppear {
-//                        phone = "+7"
-//                               }
+            TextField("+7 (XXX) XXX-XX-XX", text: $phone,
+                      onEditingChanged: { isEditing in
+                if !isEditing {
+                    validatePhoneNumber()
+                }
+            })
+                .keyboardType(.numberPad)                
                 .textFieldStyle(CustomTFStyle())
             TextField("Почта", text: $client.email)
                 .textFieldStyle(CustomTFStyle())
@@ -44,6 +41,34 @@ struct ClientView: View {
     }
 }
 
+extension ClientView {
+    var formattedPhoneNumber: String {
+        let mask = "+7 (***) ***-**-**"
+        var formattedValue = ""
+        var valueIndex = phone.startIndex
+
+        for char in mask where valueIndex < phone.endIndex {
+            if char == "#" {
+                formattedValue.append(phone[valueIndex])
+                valueIndex = phone.index(after: valueIndex)
+            } else {
+                formattedValue.append(char)
+            }
+        }
+
+        return formattedValue
+    }
+    
+    private func validatePhoneNumber() {
+        let sanitizedValue = phone.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+            
+            if sanitizedValue.count >= 10 {
+                print("Номер телефона валиден: +7 \(sanitizedValue)")
+            } else {
+//                isPhoneNumberValid = false
+            }
+    }
+}
 
 struct ClientView_Previews: PreviewProvider {
     
@@ -51,3 +76,5 @@ struct ClientView_Previews: PreviewProvider {
         ClientView()
     }
 }
+
+

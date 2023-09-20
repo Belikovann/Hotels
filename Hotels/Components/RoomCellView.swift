@@ -10,12 +10,14 @@ import SwiftUI
 struct RoomCellView: View {
     
     @EnvironmentObject var coordinator: Coordinator
+    var title: String
+    var price: Int
     
     var body: some View {
         VStack(alignment: .leading) {
             GalleryView()
                 .frame(width: 300, height: 257)
-            Text("Стандартный номер с видом на бассейн")
+            Text(title)
                 .font(.custom("SF Pro Display", size: 22))
             HStack {
                 DescriptionTagView(descriptionTag: "Включен только завтрак")
@@ -37,7 +39,7 @@ struct RoomCellView: View {
                 }
                 .foregroundColor(.blue)
             }
-            PriceView(price: "186 600", priceForIt: "За 7 ночей с перелетом")
+            PriceView(price: String(price), priceForIt: "За 7 ночей с перелетом")
             ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .booking)})
         }
         
@@ -48,6 +50,6 @@ struct RoomCellView: View {
 
 struct RoomCellView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomCellView()
+        RoomCellView(title: "Стандартный номер с видом на бассейн", price: 567557)
     }
 }

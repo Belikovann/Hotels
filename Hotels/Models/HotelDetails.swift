@@ -31,7 +31,7 @@ struct HotelDetails: Decodable {
     
     
     
-    enum RickAndMortyAPI {
+    enum allAPI {
         case hotelUrl
         case roomUrl
         case bookingUrl

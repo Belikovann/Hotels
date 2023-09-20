@@ -16,10 +16,10 @@ struct RoomScreenView: View {
         NavigationStack {
                 List {
                     Section {
-                        RoomCellView()
+                        RoomCellView(title: "Стандартный номер с видом на бассейн", price: 186600)
                     }
                     Section {
-                        RoomCellView()
+                        RoomCellView(title: "Люкс номер с видом на море", price: 289400)
                     }
                 }
                 .listStyle(.plain)

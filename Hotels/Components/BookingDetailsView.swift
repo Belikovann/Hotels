@@ -11,32 +11,31 @@ import SwiftUI
 
 struct BookingDetailsView: View {
     
+    let additionalDetails: [String: String] = [
+        "Bылет из" : "Санкт - Петербург",
+        "Страна, город" : "Египет",
+        "Даты": "19.09.2023-27.09.2023",
+        "Количество ночей": "7 ночей",
+        "Отель": "Steigenberger Makadi",
+        "Номер": "Стандартный с видом на бассейн или сад",
+        "Питание" : "Все включено"
+    ]
+    
     var body: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: 15) {
-                Text("Bылет из")
-                Text("Страна, город")
-                Text("Даты")
-                Text("Количество ночей")
-                Text("Отель")
-                Text("Номер")
-                Text("Питание")
-            }
-            .foregroundColor(.gray)
-            Spacer()
-            VStack(alignment: .leading, spacing: 15) {
-                Text("Санкт - Петербург")
-                Text("Египет")
-                Text("19.09.2023-27.09.2023")
-                Text("7 ночей")
-                Text("Steigenberger Makadi")
-                Text("Стандартный с видом на бассейн или сад")
-                Text("Все включено")
-            }
-            
-        }.font(.custom("SF Pro Display", size: 16))
-            
-        
+        VStack {
+            LazyVGrid(columns: [
+                GridItem(.flexible(), alignment: .leading),
+                GridItem(.flexible(), alignment: .leading)
+            ], spacing: 10) {
+                ForEach(Array(additionalDetails), id: \.key) { element in
+                                    Text(element.key)
+                                        .foregroundColor(.gray)
+                                    Text(element.value)
+                                        .foregroundColor(.black)
+                        .foregroundColor(.black)
+                }
+            }.font(.custom("SF Pro Display", size: 16))
+        }
     }
 }
 
@@ -45,4 +44,6 @@ struct BookingDetailsView_Previews: PreviewProvider {
         BookingDetailsView()
     }
 }
+
+
 

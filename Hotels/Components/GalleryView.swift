@@ -28,8 +28,6 @@ struct GalleryView: View {
                 }
                 .tabViewStyle(PageTabViewStyle())
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-
-                
             }
     }
 }

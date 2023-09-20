@@ -20,8 +20,7 @@ struct PriceView: View {
             Text("\(priceForIt)")
                 .font(.custom("SF Pro Display", size: 14))
                 .foregroundColor(.gray)
-        }
-    }
+        }    }
 }
 
 
