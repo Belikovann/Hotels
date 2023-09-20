@@ -14,7 +14,7 @@ struct HotelListScreenView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading) {
+                VStack {
                     GalleryView()
                         .frame(width: 300, height: 257)
                     
@@ -32,6 +32,7 @@ struct HotelListScreenView: View {
                 .navigationBarTitleDisplayMode(.inline)
             
         }
+        
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookingDetails {
+struct Booking {
     
     let hotelName: String?
     let hotelAdress: String?
@@ -37,7 +37,7 @@ enum BookingDetailsApi {
     }
 }
 
-extension BookingDetails {
+extension Booking {
     enum CodingKeys: String, CodingKey {
 
         case hotelName = "Hotel_name"

@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var clientManager: ClientManager
-
+    @StateObject var networkManager = NetworkManager.shared
     
         var body: some View {
             NavigationView{
@@ -27,6 +27,7 @@ struct ContentView: View {
                     OrderScreenView()
                 }
             }
+           
         }
     }
 

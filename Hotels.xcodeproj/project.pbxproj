@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C80EB6AD2AB87F42002450CA /* TouristView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80EB6AC2AB87F42002450CA /* TouristView.swift */; };
-		C81227B02AB3269600CFDA55 /* RoomDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227AF2AB3269600CFDA55 /* RoomDetail.swift */; };
+		C81227B02AB3269600CFDA55 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227AF2AB3269600CFDA55 /* Room.swift */; };
 		C81227B42AB4AD6B00CFDA55 /* DescriptionTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227B32AB4AD6B00CFDA55 /* DescriptionTagView.swift */; };
 		C81227B62AB4B82F00CFDA55 /* AddDetailsHotelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227B52AB4B82F00CFDA55 /* AddDetailsHotelView.swift */; };
 		C81227B82AB62A4200CFDA55 /* FacilitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227B72AB62A4200CFDA55 /* FacilitiesTableView.swift */; };
 		C81227BA2AB7243800CFDA55 /* RoomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227B92AB7243800CFDA55 /* RoomCellView.swift */; };
 		C81227BC2AB7338900CFDA55 /* RoomScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227BB2AB7338900CFDA55 /* RoomScreenView.swift */; };
 		C81227BE2AB737B000CFDA55 /* BookingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227BD2AB737B000CFDA55 /* BookingScreenView.swift */; };
-		C81227C02AB7395000CFDA55 /* BookingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227BF2AB7395000CFDA55 /* BookingDetail.swift */; };
+		C81227C02AB7395000CFDA55 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81227BF2AB7395000CFDA55 /* Booking.swift */; };
 		C823D65E2AB88F3F00C29D39 /* PayBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C823D65D2AB88F3F00C29D39 /* PayBlock.swift */; };
 		C823D6602AB8E43900C29D39 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C823D65F2AB8E43900C29D39 /* Coordinator.swift */; };
 		C823D6622AB8EB3200C29D39 /* HotelListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C823D6612AB8EB3200C29D39 /* HotelListScreenView.swift */; };
 		C830DAE72ABA072D0029AED8 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830DAE62ABA072D0029AED8 /* GalleryView.swift */; };
-		C830DAEB2ABA33A60029AED8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830DAEA2ABA33A60029AED8 /* APIManager.swift */; };
 		C830DAEE2ABA542E0029AED8 /* HotelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830DAED2ABA542E0029AED8 /* HotelViewModel.swift */; };
 		C83F7ECA2AB0EA31001B14FE /* HotelsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F7EC92AB0EA31001B14FE /* HotelsApp.swift */; };
 		C83F7ECC2AB0EA31001B14FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F7ECB2AB0EA31001B14FE /* ContentView.swift */; };
@@ -35,6 +34,7 @@
 		C856E30A2AB7729300E975FA /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C856E3092AB7729300E975FA /* Client.swift */; };
 		C85F63A72ABAFCD600213388 /* BookingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F63A62ABAFCD600213388 /* BookingDetailsView.swift */; };
 		C85F63AA2ABB0B7A00213388 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F63A92ABB0B7A00213388 /* DetailCell.swift */; };
+		C88025A62ABB4AE700A55FED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88025A52ABB4AE700A55FED /* NetworkManager.swift */; };
 		C8F731452AB774830085F8EB /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F731442AB774830085F8EB /* ClientView.swift */; };
 		C8F7314A2AB7A24F0085F8EB /* ClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F731492AB7A24F0085F8EB /* ClientManager.swift */; };
 		C8F7314C2AB876310085F8EB /* CustomTFStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7314B2AB876310085F8EB /* CustomTFStyle.swift */; };
@@ -42,19 +42,18 @@
 
 /* Begin PBXFileReference section */
 		C80EB6AC2AB87F42002450CA /* TouristView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristView.swift; sourceTree = "<group>"; };
-		C81227AF2AB3269600CFDA55 /* RoomDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetail.swift; sourceTree = "<group>"; };
+		C81227AF2AB3269600CFDA55 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		C81227B32AB4AD6B00CFDA55 /* DescriptionTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTagView.swift; sourceTree = "<group>"; };
 		C81227B52AB4B82F00CFDA55 /* AddDetailsHotelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsHotelView.swift; sourceTree = "<group>"; };
 		C81227B72AB62A4200CFDA55 /* FacilitiesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesTableView.swift; sourceTree = "<group>"; };
 		C81227B92AB7243800CFDA55 /* RoomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCellView.swift; sourceTree = "<group>"; };
 		C81227BB2AB7338900CFDA55 /* RoomScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomScreenView.swift; sourceTree = "<group>"; };
 		C81227BD2AB737B000CFDA55 /* BookingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingScreenView.swift; sourceTree = "<group>"; };
-		C81227BF2AB7395000CFDA55 /* BookingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetail.swift; sourceTree = "<group>"; };
+		C81227BF2AB7395000CFDA55 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		C823D65D2AB88F3F00C29D39 /* PayBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayBlock.swift; sourceTree = "<group>"; };
 		C823D65F2AB8E43900C29D39 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C823D6612AB8EB3200C29D39 /* HotelListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListScreenView.swift; sourceTree = "<group>"; };
 		C830DAE62ABA072D0029AED8 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		C830DAEA2ABA33A60029AED8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C830DAED2ABA542E0029AED8 /* HotelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewModel.swift; sourceTree = "<group>"; };
 		C83F7EC62AB0EA31001B14FE /* Hotels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hotels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83F7EC92AB0EA31001B14FE /* HotelsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsApp.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		C856E3092AB7729300E975FA /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		C85F63A62ABAFCD600213388 /* BookingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsView.swift; sourceTree = "<group>"; };
 		C85F63A92ABB0B7A00213388 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		C88025A52ABB4AE700A55FED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C8F731442AB774830085F8EB /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		C8F731492AB7A24F0085F8EB /* ClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientManager.swift; sourceTree = "<group>"; };
 		C8F7314B2AB876310085F8EB /* CustomTFStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTFStyle.swift; sourceTree = "<group>"; };
@@ -145,10 +145,10 @@
 		C847DB6F2AB1F55900AC8C22 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C847DB712AB1F85A00AC8C22 /* NameAndAddressView.swift */,
 				C81227B92AB7243800CFDA55 /* RoomCellView.swift */,
 				C83F7EDB2AB1E361001B14FE /* RatingView.swift */,
 				C847DB6D2AB1F1BB00AC8C22 /* PriceView.swift */,
-				C847DB712AB1F85A00AC8C22 /* NameAndAddressView.swift */,
 				C847DB732AB1FCB600AC8C22 /* ButtonView.swift */,
 				C81227B32AB4AD6B00CFDA55 /* DescriptionTagView.swift */,
 				C81227B72AB62A4200CFDA55 /* FacilitiesTableView.swift */,
@@ -167,8 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				C83F7ED72AB0EA57001B14FE /* HotelDetails.swift */,
-				C81227AF2AB3269600CFDA55 /* RoomDetail.swift */,
-				C81227BF2AB7395000CFDA55 /* BookingDetail.swift */,
+				C81227AF2AB3269600CFDA55 /* Room.swift */,
+				C81227BF2AB7395000CFDA55 /* Booking.swift */,
 				C856E3092AB7729300E975FA /* Client.swift */,
 			);
 			path = Models;
@@ -191,7 +191,7 @@
 			children = (
 				C8F731492AB7A24F0085F8EB /* ClientManager.swift */,
 				C823D65F2AB8E43900C29D39 /* Coordinator.swift */,
-				C830DAEA2ABA33A60029AED8 /* APIManager.swift */,
+				C88025A52ABB4AE700A55FED /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -276,16 +276,16 @@
 				C847DB742AB1FCB600AC8C22 /* ButtonView.swift in Sources */,
 				C847DB6E2AB1F1BB00AC8C22 /* PriceView.swift in Sources */,
 				C823D6602AB8E43900C29D39 /* Coordinator.swift in Sources */,
-				C81227B02AB3269600CFDA55 /* RoomDetail.swift in Sources */,
+				C81227B02AB3269600CFDA55 /* Room.swift in Sources */,
 				C83F7ECA2AB0EA31001B14FE /* HotelsApp.swift in Sources */,
 				C847DB722AB1F85A00AC8C22 /* NameAndAddressView.swift in Sources */,
 				C85F63A72ABAFCD600213388 /* BookingDetailsView.swift in Sources */,
-				C81227C02AB7395000CFDA55 /* BookingDetail.swift in Sources */,
+				C88025A62ABB4AE700A55FED /* NetworkManager.swift in Sources */,
+				C81227C02AB7395000CFDA55 /* Booking.swift in Sources */,
 				C83F7EDC2AB1E361001B14FE /* RatingView.swift in Sources */,
 				C85F63AA2ABB0B7A00213388 /* DetailCell.swift in Sources */,
 				C823D65E2AB88F3F00C29D39 /* PayBlock.swift in Sources */,
 				C8F7314C2AB876310085F8EB /* CustomTFStyle.swift in Sources */,
-				C830DAEB2ABA33A60029AED8 /* APIManager.swift in Sources */,
 				C830DAE72ABA072D0029AED8 /* GalleryView.swift in Sources */,
 				C81227B82AB62A4200CFDA55 /* FacilitiesTableView.swift in Sources */,
 				C81227B62AB4B82F00CFDA55 /* AddDetailsHotelView.swift in Sources */,

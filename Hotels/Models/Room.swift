@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomDetails: Decodable {
+struct Room: Decodable {
     
     let id: Int?
     let name: String?
@@ -28,7 +28,7 @@ enum RoomDetailsApi {
     }
 }
 
-extension RoomDetails {
+extension Room {
     enum CodingKeys: String, CodingKey {
         case id = "ID"
         case name = "Name"
