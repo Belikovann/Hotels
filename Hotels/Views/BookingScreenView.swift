@@ -28,7 +28,7 @@ struct BookingScreenView: View {
                     Divider()
                     ClientView()
                     TouristView(title: "Первый турист")
-                    TouristView(title: "Добавить туриста")
+                    AddTouristButtonView()
                     Divider()
                     PayBlock()
                     }

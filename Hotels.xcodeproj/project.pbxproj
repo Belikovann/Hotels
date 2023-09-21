@@ -36,6 +36,7 @@
 		C85F63AA2ABB0B7A00213388 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F63A92ABB0B7A00213388 /* DetailCell.swift */; };
 		C88025A62ABB4AE700A55FED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88025A52ABB4AE700A55FED /* NetworkManager.swift */; };
 		C88025A82ABB756000A55FED /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88025A72ABB756000A55FED /* TagView.swift */; };
+		C8EA19CA2ABC4C6A00FD6693 /* AddTouristButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EA19C92ABC4C6A00FD6693 /* AddTouristButtonView.swift */; };
 		C8F731452AB774830085F8EB /* ClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F731442AB774830085F8EB /* ClientView.swift */; };
 		C8F7314A2AB7A24F0085F8EB /* ClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F731492AB7A24F0085F8EB /* ClientManager.swift */; };
 		C8F7314C2AB876310085F8EB /* CustomTFStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F7314B2AB876310085F8EB /* CustomTFStyle.swift */; };
@@ -72,6 +73,7 @@
 		C85F63A92ABB0B7A00213388 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		C88025A52ABB4AE700A55FED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C88025A72ABB756000A55FED /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		C8EA19C92ABC4C6A00FD6693 /* AddTouristButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTouristButtonView.swift; sourceTree = "<group>"; };
 		C8F731442AB774830085F8EB /* ClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientView.swift; sourceTree = "<group>"; };
 		C8F731492AB7A24F0085F8EB /* ClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientManager.swift; sourceTree = "<group>"; };
 		C8F7314B2AB876310085F8EB /* CustomTFStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTFStyle.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				C85F63A62ABAFCD600213388 /* BookingDetailsView.swift */,
 				C85F63A92ABB0B7A00213388 /* DetailCell.swift */,
 				C88025A72ABB756000A55FED /* TagView.swift */,
+				C8EA19C92ABC4C6A00FD6693 /* AddTouristButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				C856E30A2AB7729300E975FA /* Client.swift in Sources */,
 				C830DAEE2ABA542E0029AED8 /* HotelViewModel.swift in Sources */,
 				C8F7314A2AB7A24F0085F8EB /* ClientManager.swift in Sources */,
+				C8EA19CA2ABC4C6A00FD6693 /* AddTouristButtonView.swift in Sources */,
 				C823D6622AB8EB3200C29D39 /* HotelListScreenView.swift in Sources */,
 				C83F7ED82AB0EA58001B14FE /* HotelDetails.swift in Sources */,
 				C83F7ECC2AB0EA31001B14FE /* ContentView.swift in Sources */,
