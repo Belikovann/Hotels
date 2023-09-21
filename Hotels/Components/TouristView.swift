@@ -55,4 +55,3 @@ struct TouristView_Previews: PreviewProvider {
 
 
 
-//chevron.up.square.fill
