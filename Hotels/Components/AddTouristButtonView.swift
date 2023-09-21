@@ -12,9 +12,14 @@ struct AddTouristButtonView: View {
         Button(action: {}) {
             HStack {
                 Text("Добавить туриста")
+                    .foregroundColor(.black)
+                    .font(.custom("SF Pro Display", size: 22))
+                Spacer()
                 Image(systemName: "plus.app.fill")
+                    .font(.title)
             }
         }
+        .padding()
     }
 }
 
