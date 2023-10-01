@@ -20,7 +20,7 @@ struct DetailCell: View {
             Text(description)
                 .padding(.leading)
         }
-        .font(.custom("SF Pro Display", size: 16))
+        .modifier(CustTextStyle(size: 16))
         
     }
 }

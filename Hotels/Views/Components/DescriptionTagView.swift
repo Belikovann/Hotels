@@ -12,7 +12,7 @@ struct DescriptionTagView: View {
     
     var body: some View {
         Text("\(descriptionTag)")
-            .font(.custom("SF Pro Display", size: 16))
+            .modifier(CustTextStyle(size: 16))
             .foregroundColor(.gray)
             .padding(10)
             .background(

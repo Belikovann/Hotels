@@ -18,6 +18,7 @@ struct RatingView: View {
             HStack {
                 Image(systemName: "star.fill")
                 Text("5 Превосходно")
+                    .modifier(CustTextStyle(size: 16))
             }
             .foregroundColor(.orange)
         }

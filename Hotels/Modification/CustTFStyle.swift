@@ -1,13 +1,13 @@
 //
-//  TextFieldView.swift
+//  CustTFStyle.swift
 //  Hotels
 //
-//  Created by Аня Беликова on 18.09.2023.
+//  Created by Аня Беликова on 01.10.2023.
 //
 
 import SwiftUI
 
-struct CustomTFStyle: TextFieldStyle {
+struct CustTFStyle: TextFieldStyle {
     
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
@@ -18,8 +18,3 @@ struct CustomTFStyle: TextFieldStyle {
     }
     
 }
-
-
-
-
-

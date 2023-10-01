@@ -21,7 +21,7 @@ struct OrderScreenView: View {
                         .opacity(0.15)
                         .frame(width: 94)
                     Text("🎉")
-                        .font(.system(size: 44))
+                        .modifier(CustTextStyle(size: 22))
                 }
                 Text("Ваш заказ принят в работу")
                     .font(.custom("SF Pro Display", size: 22))

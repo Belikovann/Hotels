@@ -15,23 +15,63 @@ enum NetworkError: Error {
 
 class NetworkManager: ObservableObject {
     
-    @Published var hotel: HotelDetails.Hotel?
-    
     static let shared = NetworkManager()
+    
     private init() {}
     
-    private func createURL() -> URL? {
-        return URL(string: "https://run.mocky.io/v3/e8868481-743f-4eb2-a0d7-2bc4012275c8")!
-    }
     
-    func fetchData(from url: URL) async throws -> HotelDetails {
-        let (data, _) = try await URLSession.shared.data(from: url)
+    func fetchHotels() async throws -> [Hotel] {
+        let (data, _) = try await URLSession.shared.data(from: URL(string: "https://run.mocky.io/v3/e8868481-743f-4eb2-a0d7-2bc4012275c8")!)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        let result = try decoder.decode(HotelDetails.self, from: data)
+        do {
+            let hotels = try decoder.decode(HotelQuery.self, from: data)
+            print("Hotels loaded successfully:", hotels.data)
+            return hotels.data
+        } catch {
+            throw NetworkError.decodingError
+        }
+    }
+    
+    
+//    func fetchRoom() async throws -> [Room] {
+//        let (data, _) = try await URLSession.shared.data(from: Link.roomUrl.url)
+//        let decoder = JSONDecoder()
+//        decoder.keyDecodingStrategy = .convertFromSnakeCase
+//        do {
+//            let roomQuery = try decoder.decode(RoomQuery.self, from: data)
+//            return roomQuery.data
+//        } catch {
+//            throw NetworkError.invalidURL
+//        }
+//        
+//    }
 
-        return result
     }
 
-    }
 
+
+
+extension NetworkManager {
+  
+        enum Link {
+            case hotelUrl
+            case roomUrl
+            case bookingUrl
+    
+    
+            var url: URL {
+                switch self {
+                case .hotelUrl:
+                    return URL(string: "https://run.mocky.io/v3/e8868481-743f-4eb2-a0d7-2bc4012275c8")!
+                case .roomUrl:
+                    return URL(string: "https://run.mocky.io/v3/f9a38183-6f95-43aa-853a-9c83cbb05ecd")!
+                case .bookingUrl:
+                    return URL(string: "https://run.mocky.io/v3/e8868481-743f-4eb2-a0d7-2bc4012275c8")!
+    
+                }
+            }
+        }
+        
+    
+}

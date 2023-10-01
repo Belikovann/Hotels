@@ -18,9 +18,10 @@ struct ContentView: View {
             NavigationView{
                 switch coordinator.currentScreen {
                 case .hotels:
-                    HotelListScreenView()
+                    HotelListView()
                 case .rooms:
-                    RoomScreenView()
+                    BookingScreenView()
+//                    RoomView()
                 case .booking:
                     BookingScreenView()
                 case .order:

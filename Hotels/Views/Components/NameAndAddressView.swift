@@ -12,14 +12,14 @@ struct NameAndAddressView: View {
     var adress: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(spacing: 10) {
             Text(name)
-                .font(.custom("SF Pro Display", size: 22))
+                .modifier(CustTextStyle(size: 22))
             
             Button(action: {}) {
                 Text(adress)
                     .foregroundColor(.accentColor)
-                    .font(.custom("SF Pro Display", size: 14))
+                    .modifier(CustTextStyle(size: 14))
             }
         }
     }

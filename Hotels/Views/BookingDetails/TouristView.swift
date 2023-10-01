@@ -12,6 +12,7 @@ struct TouristView: View {
     
     @State private var isExpanded = false
     @State var tourist = Client()
+    @State var isNewTouristVisible = false
     
     var title: String
     
@@ -21,33 +22,32 @@ struct TouristView: View {
                 isExpanded: $isExpanded,
                 content: {
                     TextField("Имя", text: $tourist.name)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                     TextField("Фамилия", text: $tourist.surname)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                     TextField("Дата рождения", text: $tourist.dataOfBirth)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                     TextField("Гражданство", text: $tourist.citizenship)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                     TextField("Номер загранпаспорта", text: $tourist.passportNumber)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                     TextField("Срок действия загранпаспорта", text: $tourist.dateOfPassport)
-                        .textFieldStyle(CustomTFStyle())
+                        .textFieldStyle(CustTFStyle())
                 },
                 label: {
-                        Text("\(title)")
-                            .foregroundColor(.black)
-                            .font(.custom("SF Pro Display", size: 22))
-                            .padding(10)
+                    Text("\(title)")
+                        .foregroundColor(.black)
+                        .modifier(CustTextStyle(size: 22))
+                    Spacer()
                 }
             )
-           
-                    }
         }
     }
+}
 
 
 struct TouristView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         TouristView(title: "Турист")
     }

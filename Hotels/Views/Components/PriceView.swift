@@ -10,15 +10,15 @@ import SwiftUI
 struct PriceView: View {
     
     let rubleSymbol = "\u{20BD}"
-    var price: String
+    var price: Int
     var priceForIt: String
     
     var body: some View {
         HStack(alignment: .bottom) {
             Text("от \(price)\(rubleSymbol)")
-                .font(.custom("SF Pro Display", size: 30))
+                .modifier(CustTextStyle(size: 30))
             Text("\(priceForIt)")
-                .font(.custom("SF Pro Display", size: 14))
+                .modifier(CustTextStyle(size: 16))
                 .foregroundColor(.gray)
         }    }
 }
@@ -26,6 +26,6 @@ struct PriceView: View {
 
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceView(price: "136 374", priceForIt: "за тур с перелетом")
+        PriceView(price: 136374, priceForIt: "за тур с перелетом")
     }
 }

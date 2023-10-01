@@ -19,7 +19,7 @@ struct AddDetailHotelView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет! ")
-                .font(.custom("SF Pro Display", size: 16))
+                .modifier(CustTextStyle(size: 16))
             FacilitiesTableView()
         }
         .padding()

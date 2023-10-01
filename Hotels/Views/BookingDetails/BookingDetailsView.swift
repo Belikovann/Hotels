@@ -34,7 +34,7 @@ struct BookingDetailsView: View {
                                         .foregroundColor(.black)
                         .foregroundColor(.black)
                 }
-            }.font(.custom("SF Pro Display", size: 16))
+            }.modifier(CustTextStyle(size: 16))
         }
     }
 }

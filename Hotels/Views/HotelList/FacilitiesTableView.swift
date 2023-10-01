@@ -31,15 +31,17 @@ struct FacilitiesTableView: View {
             Button(action: {}) {
                 HStack{
                     Image(systemName: "\(icon)")
-                        .font(.title3)
                         .foregroundColor(.black)
+                        .frame(width: 20, height: 20)
+                        .clipShape(Rectangle())
+                        
                     VStack(alignment: .leading) {
                         Text("\(title)")
                             .foregroundColor(.black)
-                            .font(.custom("SF Pro Display", size: 16))
+                            .modifier(CustTextStyle(size: 16))
                         Text("Самое необходимое")
                             .foregroundColor(.gray)
-                            .font(.custom("SF Pro Display", size: 14))
+                            .modifier(CustTextStyle(size: 14))
                     }
                     Spacer()
                     Image(systemName: "chevron.right")

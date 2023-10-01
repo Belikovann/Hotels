@@ -16,7 +16,7 @@ struct ClientView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Информация о покупателе")
-                .font(.custom("SF Pro Display", size: 22))
+                .modifier(CustTextStyle(size: 22))
                 .bold()
             TextField("+7 (XXX) XXX-XX-XX", text: $phone,
                       onEditingChanged: { isEditing in
@@ -25,15 +25,14 @@ struct ClientView: View {
                 }
             })
                 .keyboardType(.numberPad)                
-                .textFieldStyle(CustomTFStyle())
             TextField("Почта", text: $client.email)
-                .textFieldStyle(CustomTFStyle())
+                .textFieldStyle(CustTFStyle())
                 .onChange(of: client.email) { _ in }
                 .autocapitalization(.none)
                 .textContentType(.emailAddress)
                 .keyboardType(.emailAddress)
             Text("Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту")
-                .font(.custom("SF Pro Display", size: 14))
+                .modifier(CustTextStyle(size: 14))
                 .foregroundColor(.gray)
                 
             
