@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Combine 
+import SwiftUI
 
 enum NetworkError: Error {
     case invalidURL, noData, decodingError
