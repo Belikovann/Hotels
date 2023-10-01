@@ -9,25 +9,25 @@ import SwiftUI
 
 struct HotelCellView: View {
     let hotel: Hotel
+    @StateObject private var hotelListViewModel = HotelListViewModel()
     
     var body: some View {
         
         VStack{
-            LazyHGrid(rows: [GridItem(), GridItem()]){
-                ForEach(hotel.imageUrls, id: \.self) { imageUrl in
-                    HotelGalleryView(imageURL: imageUrl)
-                }
+            HotelGalleryView(hotel: hotel)
+            VStack(alignment: .leading) {
+                RatingView()
+                NameAndAddressView(name: hotel.name, adress: hotel.adress)
+                //                            PriceView(price: <#T##Int#>, priceForIt: <#T##String#>)
             }
-                    VStack(alignment: .leading) {
-                        RatingView()
-                        NameAndAddressView(name: hotel.name, adress: hotel.adress)
-                        //                            PriceView(price: <#T##Int#>, priceForIt: <#T##String#>)
-                    }
-                    TagView()
-                    AddDetailHotelView()
-                }
+            TagView()
+            AddDetailHotelView()
+        }
+        .padding()
     }
 }
+
+
     
 struct HotelCellView_Previews: PreviewProvider {
     static var previews: some View {

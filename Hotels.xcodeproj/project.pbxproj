@@ -173,10 +173,10 @@
 		C867E5522AC9F9FC007C68FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C867E53E2AC9F9AD007C68FF /* Client.swift */,
-				C867E5372AC9F9AD007C68FF /* Booking.swift */,
 				C867E5532AC9F9FC007C68FF /* Hotel.swift */,
 				C867E5602AC9F9FD007C68FF /* Room.swift */,
+				C867E5372AC9F9AD007C68FF /* Booking.swift */,
+				C867E53E2AC9F9AD007C68FF /* Client.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -489,9 +489,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.Hotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,9 +522,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.Hotels;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

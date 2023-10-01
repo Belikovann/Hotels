@@ -5,7 +5,6 @@
 //  Created by Аня Беликова on 20.09.2023.
 //
 
-import Foundation
 import SwiftUI
 
 enum NetworkError: Error {
@@ -14,14 +13,12 @@ enum NetworkError: Error {
 
 
 class NetworkManager: ObservableObject {
-    
     static let shared = NetworkManager()
     
     private init() {}
     
-    
     func fetchHotels() async throws -> [Hotel] {
-        let (data, _) = try await URLSession.shared.data(from: URL(string: "https://run.mocky.io/v3/e8868481-743f-4eb2-a0d7-2bc4012275c8")!)
+        let (data, _) = try await URLSession.shared.data(from: Link.hotelUrl.url)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
