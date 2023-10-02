@@ -18,30 +18,40 @@ struct BookingView: View {
             ScrollView{
                 VStack(alignment: .leading, spacing: 20){
                     if let booking = bookingDetailViewModel.bookingDetails {
-                        
+                        BookingCell(booking: booking)
+                            .overlay {
+                                if bookingDetailViewModel.isLoading {
+                                    ProgressView()
+                                }
+                            }
                     } else {
                         Text("Loading ...")
                             .foregroundColor(.gray)
                     }
-                    }
-
-               
-
-                    .navigationTitle("Бронирование")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(
-                        leading:
-                            Button(action: {
-                                coordinator.navigateBack()
-                            }) {
-                                Image(systemName: "chevron.left")
-                                    .foregroundColor(.black)
-                            }
-                        )
+                }
+                
+                
+                
+                .navigationTitle("Бронирование")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(
+                    leading:
+                        Button(action: {
+                            coordinator.navigateBack()
+                        }) {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(.black)
+                        }
+                )
             }
             ButtonView(title: "Забронировать") { coordinator.navigateTo(screen: .order)}
         }
         .padding()
+        .onAppear() {
+            Task {
+                await bookingDetailViewModel.fetchBookingDetail()
+            }
+        }
     }
 }
 

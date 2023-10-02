@@ -28,7 +28,7 @@ struct Booking: Decodable, Identifiable {
     
     static let example = Booking(
     id: 1,
-    hotelName: "Лучший пятизвездочный отель в Хургаде, Египет",
+    hotelName: " лол кек ",
     hotelAddress: "Madinat Makadi, Safaga Road, Makadi Bay, Египет",
     horating: 5,
     ratingName: "Превосходно",
