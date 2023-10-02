@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Rooms: Decodable {
+    let rooms: [Room]
+}
+
 struct Room: Decodable, Identifiable {
     
     let id: Int
@@ -37,15 +41,12 @@ struct Room: Decodable, Identifiable {
 
 extension Room {
     enum CodingKeys: String, CodingKey {
-        case id = "ID"
-        case name = "Name"
-        case price = "Price"
-        case pricePer = "Price_per"
-        case peculiarities = "Peculiarities"
-        case imageUrls = "Image_urls"
+        case id = "id"
+        case name = "name"
+        case price = "price"
+        case pricePer = "price_per"
+        case peculiarities = "peculiarities"
+        case imageUrls = "image_urls"
     }
 }
 
-struct RoomQuery: Decodable {
-    let data: [Room]
-}

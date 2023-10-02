@@ -13,6 +13,8 @@ struct ContentView: View {
     @EnvironmentObject var coordinator: Coordinator
     @EnvironmentObject var clientManager: ClientManager
     @StateObject var networkManager = NetworkManager.shared
+    @StateObject var hotelListViewModel = HotelListViewModel()
+    
     
         var body: some View {
             NavigationView{
@@ -20,10 +22,9 @@ struct ContentView: View {
                 case .hotels:
                     HotelListView()
                 case .rooms:
-                    BookingScreenView()
-//                    RoomView()
+                    RoomView()
                 case .booking:
-                    BookingScreenView()
+                    BookingView()
                 case .order:
                     OrderScreenView()
                 }

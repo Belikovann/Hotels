@@ -9,14 +9,14 @@ import SwiftUI
 
 struct NameAndAddressView: View {
     var name: String
-    var adress: String
+    var address: String
 
     var body: some View {
         VStack(spacing: 10) {
             Text(name)
                 .modifier(CustTextStyle(size: 22))
             Button(action: {}) {
-                Text(adress)
+                Text(address)
                     .foregroundColor(.accentColor)
                     .modifier(CustTextStyle(size: 14))
             }
@@ -28,7 +28,7 @@ struct NameAndAddressView: View {
 struct NameAndAddressView_Previews: PreviewProvider {
     
     static var previews: some View {
-        NameAndAddressView(name: "название", adress: "адрес")
+        NameAndAddressView(name: "название", address: "адрес")
     }
 }
 

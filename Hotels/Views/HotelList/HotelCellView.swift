@@ -9,24 +9,21 @@ import SwiftUI
 
 struct HotelCellView: View {
     let hotel: Hotel
-    @StateObject private var hotelListViewModel = HotelListViewModel()
-    
+
     var body: some View {
-        
         VStack{
             HotelGalleryView(hotel: hotel)
+            
             VStack(alignment: .leading) {
                 RatingView()
-                NameAndAddressView(name: hotel.name, adress: hotel.adress)
+                NameAndAddressView(name: hotel.name, address: hotel.address)
                 PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
             }
             TagView()
             AddDetailHotelView()
         }
-        .padding()
     }
 }
-
 
     
 struct HotelCellView_Previews: PreviewProvider {

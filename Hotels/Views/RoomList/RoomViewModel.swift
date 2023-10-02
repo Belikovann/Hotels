@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 final class RoomViewModel: ObservableObject {
     @Published var rooms: [Room] = []
-@Published var isLoading = false
+    @Published var isLoading = false
     
     private let networkManager = NetworkManager.shared
     

@@ -9,30 +9,20 @@ import Foundation
 
 @MainActor
 final class HotelListViewModel: ObservableObject {
-    @Published var hotels: [Hotel] = []
+    @Published var hotel: Hotel? = nil
     @Published var isLoading = false
     
     private let networkManager = NetworkManager.shared
-    
-    func fetchHotels() async {
+        
+    func fetchHotel() async {
       isLoading = true
         do {
-            hotels = try await networkManager.fetchHotels()
+            hotel = try await networkManager.fetchHotel()
             isLoading = false
         } catch {
-            print(error.localizedDescription)
+            print("Error during decoding:", error)
         }
         isLoading = false
     }
-//    func fetchHotel() async {
-//      isLoading = true
-//        do {
-//            hotels = try await networkManager.fetchHotel()
-//            isLoading = false
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        isLoading = false
-//    }
     
 }

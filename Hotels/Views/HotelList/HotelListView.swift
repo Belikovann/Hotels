@@ -14,32 +14,57 @@ struct HotelListView: View {
 
     var body: some View {
         NavigationStack {
-            List(hotelListViewModel.hotels) { hotel in
-                        HotelCellView(hotel: hotel)
-            }
-            .listStyle(.plain)
-            .overlay {
-                if hotelListViewModel.isLoading {
-                    ProgressView()
-                }
-            }
-            .onAppear {
-                if hotelListViewModel.hotels.isEmpty {
-                    Task {
-                        await hotelListViewModel.fetchHotels()
-                    }
-                }
-            }
-            .navigationTitle("Отель")
-            .navigationBarTitleDisplayMode(.inline)
             
-            ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
-                .padding()
+            if let hotel = hotelListViewModel.hotel {
+                  HotelCellView(hotel: hotel)
+                    .overlay {
+                        if hotelListViewModel.isLoading {
+                            ProgressView()
+                        }
+                    }
+             
+                    .navigationTitle("Отель")
+                    .navigationBarTitleDisplayMode(.inline)
+                
+                ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
+                    .padding()
+              } else {
+                  Text("Loading ...")
+                      .foregroundColor(.gray)
+              }
+            
+            
+//            HotelCellView(hotel: hotelListViewModel.hotel)
+//            //            List(hotelListViewModel.hotel) { hotel in
+//            //                        HotelCellView(hotel: hotel)
+//            //            }
+//            //            .listStyle(.plain)
+//                .overlay {
+//                    if hotelListViewModel.isLoading {
+//                        ProgressView()
+//                    }
+//                }
+//            //            .onAppear {
+//            //                if hotelListViewModel.hotel.isEmpty {
+//            //                    Task {
+//            //                        await hotelListViewModel.fetchHotel()
+//            //                    }
+//            //                }
+//            //            }
+//                .navigationTitle("Отель")
+//                .navigationBarTitleDisplayMode(.inline)
+            
+          
         }
-
-
-                }
+        .onAppear {
+            Task {
+                await hotelListViewModel.fetchHotel()
             }
+        }
+        
+        
+    }
+}
 
 
 struct HotelListView_Previews: PreviewProvider {
