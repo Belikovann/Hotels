@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ClientView: View {
-
+    
     @State var client = Client()
     @State private var phone = ""
     
@@ -24,7 +24,8 @@ struct ClientView: View {
                     validatePhoneNumber()
                 }
             })
-                .keyboardType(.numberPad)                
+                .textFieldStyle(CustTFStyle())
+                .keyboardType(.numberPad)
             TextField("Почта", text: $client.email)
                 .textFieldStyle(CustTFStyle())
                 .onChange(of: client.email) { _ in }
@@ -34,7 +35,6 @@ struct ClientView: View {
             Text("Эти данные никому не передаются. После оплаты мы вышли чек на указанный вами номер и почту")
                 .modifier(CustTextStyle(size: 14))
                 .foregroundColor(.gray)
-                
             
         }
     }

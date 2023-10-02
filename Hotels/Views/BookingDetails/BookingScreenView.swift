@@ -25,7 +25,11 @@ struct BookingScreenView: View {
                 VStack(alignment: .leading, spacing: 20){
                     VStack(alignment: .leading) {
                         RatingView()
-//                        NameAndAddressView(name: networkManager.hotel?.name ?? "Лучший пятизвездочный отель в Хургаде, Египет", adress: networkManager.hotel?.adress ?? "Madinat Makadi, Safaga Road, Makadi Bay, Египет")
+//                        NameAndAddressView(name: $networkManager.self
+////                                           "Лучший пятизвездочный отель в Хургаде, Египет"
+//                                           , adress: $networkManager
+////                                           "Madinat Makadi, Safaga Road, Makadi Bay, Египет"
+//                        )
                     }
                     Divider()
                     BookingDetailsView()

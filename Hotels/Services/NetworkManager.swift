@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 enum NetworkError: Error {
     case invalidURL, noData, decodingError
@@ -29,21 +30,19 @@ class NetworkManager: ObservableObject {
             throw NetworkError.decodingError
         }
     }
-    
-    
-//    func fetchRoom() async throws -> [Room] {
-//        let (data, _) = try await URLSession.shared.data(from: Link.roomUrl.url)
-//        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        do {
-//            let roomQuery = try decoder.decode(RoomQuery.self, from: data)
-//            return roomQuery.data
-//        } catch {
-//            throw NetworkError.invalidURL
-//        }
-//        
-//    }
 
+    func fetchRooms() async throws -> [Room] {
+        let (data, _) = try await URLSession.shared.data(from: Link.roomUrl.url)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        do {
+            let rooms = try decoder.decode(RoomQuery.self, from: data)
+            print("Rooms loaded successfully:", rooms.data)
+            return rooms.data
+        } catch {
+            throw NetworkError.decodingError
+        }
+    }
     }
 
 

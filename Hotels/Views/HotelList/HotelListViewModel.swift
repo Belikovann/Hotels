@@ -5,7 +5,7 @@
 //  Created by Аня Беликова on 20.09.2023.
 //
 //
-import Observation
+import Foundation
 
 @MainActor
 final class HotelListViewModel: ObservableObject {

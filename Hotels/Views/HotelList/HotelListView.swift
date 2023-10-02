@@ -30,11 +30,13 @@ struct HotelListView: View {
                     }
                 }
             }
+            .navigationTitle("Отель")
+            .navigationBarTitleDisplayMode(.inline)
+            
             ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
                 .padding()
         }
-        .navigationTitle("Отель")
-        .navigationBarTitleDisplayMode(.inline)
+
 
                 }
             }

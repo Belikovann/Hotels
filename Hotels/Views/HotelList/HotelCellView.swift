@@ -18,7 +18,7 @@ struct HotelCellView: View {
             VStack(alignment: .leading) {
                 RatingView()
                 NameAndAddressView(name: hotel.name, adress: hotel.adress)
-                //                            PriceView(price: <#T##Int#>, priceForIt: <#T##String#>)
+                PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
             }
             TagView()
             AddDetailHotelView()

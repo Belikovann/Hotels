@@ -1,19 +1,18 @@
 //
-//  HotelGalleryView.swift
+//  RoomGalleryView.swift
 //  Hotels
 //
-//  Created by Аня Беликова on 01.10.2023.
+//  Created by Аня Беликова on 02.10.2023.
 //
-
 
 import SwiftUI
 
-struct HotelGalleryView: View {
-    let hotel: Hotel
-
+struct RoomGalleryView: View {
+    let room: Room
+    
     var body: some View {
         TabView {
-            ForEach(hotel.imageUrls, id: \.self) { imageUrl in
+            ForEach(room.imageUrls, id: \.self) { imageUrl in
                 AsyncImage(url: URL(string: imageUrl)) { phase in
                     switch phase {
                         case .success(let image):
@@ -32,8 +31,14 @@ struct HotelGalleryView: View {
     }
 }
 
-struct HotelGalleryView_Previews: PreviewProvider {
+
+struct RoomGalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        HotelGalleryView(hotel: Hotel.example)
+        RoomGalleryView(room: Room.example)
     }
 }
+
+
+
+
+ 

@@ -10,6 +10,7 @@ import Foundation
 
 struct Hotel: Decodable, Identifiable {
     
+    
         let id: Int
         let name: String
         let adress: String
@@ -18,30 +19,14 @@ struct Hotel: Decodable, Identifiable {
         let rating: Int
         let ratingName: String
         let imageUrls: [String]
-        let aboutTheHotel: AboutTheHotel?
+        let aboutTheHotel: AboutTheHotel
         
-    enum CodingKeys: String, CodingKey {
-            case id, name, adress
-            case minimalPrice = "minimal_price"
-            case priceForIt = "price_for_it"
-            case rating
-            case ratingName = "rating_name"
-            case imageUrls = "image_urls"
-            case aboutTheHotel = "about_the_hotel"
-        }
-    
-//    private init() {}
-    
-    struct AboutTheHotel: Decodable {
-        let description: String
-        let peculiarities: [String]
-    }
-    
+
     static let example = Hotel(
         id: 1,
-        name: "Какое-то название",
+        name: "Лучший пятизвездочный отель в Хургаде, Египет",
         adress: "Madinat Makadi, Safaga Road, Makadi Bay, Египет",
-        minimalPrice: 134268,
+        minimalPrice: 134900,
         priceForIt: "За тур с перелётом",
         rating: 5,
         ratingName: "Превосходно",
@@ -60,8 +45,15 @@ struct Hotel: Decodable, Identifiable {
             ]
         )
     )
+
+}
+
+struct AboutTheHotel: Decodable {
+    let description: String
+    let peculiarities: [String]
 }
 
 struct HotelQuery: Decodable {
     let data: [Hotel]
 }
+
