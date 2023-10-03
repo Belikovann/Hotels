@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PayBlock: View {
     
-    var tourPrice = 186600
-    var fuelPrice = 9300
-    var servicePrice = 2136
+    var tourPrice: Int
+    var fuelPrice: Int
+    var servicePrice: Int
     let rubleSymbol = "\u{20BD}"
     
     var body: some View {
@@ -49,6 +49,6 @@ struct PayBlock: View {
 struct PayBlock_Previews: PreviewProvider {
     
     static var previews: some View {
-        PayBlock()
+        PayBlock(tourPrice: 1000, fuelPrice: 1000, servicePrice: 1000)
     }
 }

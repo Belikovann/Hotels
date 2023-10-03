@@ -44,7 +44,6 @@ struct BookingView: View {
                         }
                 )
             }
-            ButtonView(title: "Забронировать") { coordinator.navigateTo(screen: .order)}
         }
         .padding()
         .onAppear() {

@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct BookingCell: View {
+    @EnvironmentObject var coordinator: Coordinator
     let booking: Booking
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             RatingView()
             NameAndAddressView(name: booking.hotelName, address: booking.hotelAddress)
             BookingDetailsView()
             ClientView()
             TouristView(title: "Первый турист")
-            PayBlock()
+            PayBlock(tourPrice: booking.tourPrice, fuelPrice: booking.fuelCharge, servicePrice: booking.serviceCharge)
+            ButtonView(title: "Оплатить \(booking.tourPrice + booking.serviceCharge + booking.fuelCharge) руб.") { coordinator.navigateTo(screen: .order)}
             
         }
     }
