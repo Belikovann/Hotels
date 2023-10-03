@@ -12,7 +12,7 @@ struct NameAndAddressView: View {
     var address: String
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(alignment: .leading, spacing: 10) {
             Text(name)
                 .modifier(CustTextStyle(size: 22))
             Button(action: {}) {

@@ -11,7 +11,7 @@ struct HotelCellView: View {
     let hotel: Hotel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20){
+        VStack(alignment: .leading, spacing: 10){
             HotelGalleryView(hotel: hotel)
                 RatingView()
                 NameAndAddressView(name: hotel.name, address: hotel.address)

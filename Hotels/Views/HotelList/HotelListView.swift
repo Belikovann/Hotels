@@ -18,9 +18,9 @@ struct HotelListView: View {
             if let hotel = hotelListViewModel.hotel {
                 ScrollView {
                     HotelCellView(hotel: hotel)
-                    ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
-                        .padding()
                 }
+                ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
+                    .padding()
                 .overlay {
                     if hotelListViewModel.isLoading {
                         ProgressView()
