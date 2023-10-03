@@ -9,13 +9,12 @@ import SwiftUI
 
 struct HotelCellView: View {
     let hotel: Hotel
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            HotelGalleryView(hotel: hotel)
-                RatingView()
-                NameAndAddressView(name: hotel.name, address: hotel.address)
-                PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
+            RatingView()
+            NameAndAddressView(name: hotel.name, address: hotel.address)
+            PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
             Text("Об отеле")
                 .font(.title2)
             TagView(descriptionTags: hotel.aboutTheHotel.peculiarities)
@@ -26,7 +25,7 @@ struct HotelCellView: View {
     }
 }
 
-    
+
 struct HotelCellView_Previews: PreviewProvider {
     static var previews: some View {
         HotelCellView(hotel: Hotel.example)

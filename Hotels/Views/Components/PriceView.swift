@@ -15,9 +15,8 @@ struct PriceView: View {
     
     var body: some View {
         HStack(alignment: .bottom) {
-            Text("от \(String(price))\(rubleSymbol)")
+            Text("от \(String(price)) \(rubleSymbol)")
                 .modifier(CustTextStyle(size: 30))
-                
             Text("\(priceForIt)")
                 .modifier(CustTextStyle(size: 16))
                 .foregroundColor(.gray)

@@ -11,11 +11,11 @@ struct FacilitiesTableView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            FacilitiesCellView(title: "Удобства", icon: "face.smiling")
+            FacilitiesCellView(title: "Удобства", icon: "emojiHappy")
             Divider()
-            FacilitiesCellView(title: "Что включено", icon: "checkmark.square")
+            FacilitiesCellView(title: "Что включено", icon: "tickSquare")
             Divider()
-            FacilitiesCellView(title: "Что не включено", icon: "xmark.square")
+            FacilitiesCellView(title: "Что не включено", icon: "closeSquare")
         }
         .background(Color(red: 251 / 255, green: 251 / 255, blue: 252 / 255, opacity: 1))
         .cornerRadius(10)
@@ -30,10 +30,8 @@ struct FacilitiesTableView: View {
         var body: some View {
             Button(action: {}) {
                 HStack{
-                    Image(systemName: "\(icon)")
-                        .foregroundColor(.black)
-                        .frame(width: 20, height: 20)
-                        .clipShape(Rectangle())
+                    Image("\(icon)")
+                        .frame(width: 30, height: 30)
                         
                     VStack(alignment: .leading) {
                         Text("\(title)")
@@ -57,3 +55,6 @@ struct FacilitiesTableView_Previews: PreviewProvider {
         FacilitiesTableView()
     }
 }
+
+
+//systemName: "\(icon

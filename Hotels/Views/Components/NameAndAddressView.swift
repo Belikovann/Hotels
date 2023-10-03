@@ -14,7 +14,7 @@ struct NameAndAddressView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(name)
-                .modifier(CustTextStyle(size: 22))
+                .font(.title)
             Button(action: {}) {
                 Text(address)
                     .foregroundColor(.accentColor)

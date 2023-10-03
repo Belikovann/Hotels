@@ -17,14 +17,14 @@ struct HotelGalleryView: View {
             ForEach(hotel.imageUrls, id: \.self) { imageUrl in
                 AsyncImage(url: URL(string: imageUrl)) { phase in
                     switch phase {
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                        default:
-                            ProgressView()
-                        }
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    default:
+                        ProgressView()
+                    }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
