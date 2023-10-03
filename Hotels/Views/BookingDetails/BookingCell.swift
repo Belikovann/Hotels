@@ -12,12 +12,13 @@ struct BookingCell: View {
     let booking: Booking
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
             RatingView()
             NameAndAddressView(name: booking.hotelName, address: booking.hotelAddress)
             BookingDetailsView()
             ClientView()
             TouristView(title: "Первый турист")
+            AddTouristButtonView()
             PayBlock(tourPrice: booking.tourPrice, fuelPrice: booking.fuelCharge, servicePrice: booking.serviceCharge)
             ButtonView(title: "Оплатить \(booking.tourPrice + booking.serviceCharge + booking.fuelCharge) руб.") { coordinator.navigateTo(screen: .order)}
             

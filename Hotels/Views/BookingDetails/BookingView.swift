@@ -30,8 +30,6 @@ struct BookingView: View {
                     }
                 }
                 
-                
-                
                 .navigationTitle("Бронирование")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(
