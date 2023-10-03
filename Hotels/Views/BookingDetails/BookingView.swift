@@ -29,21 +29,20 @@ struct BookingView: View {
                             .foregroundColor(.gray)
                     }
                 }
-                
-                .navigationTitle("Бронирование")
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(
-                    leading:
-                        Button(action: {
-                            coordinator.navigateBack()
-                        }) {
-                            Image(systemName: "chevron.left")
-                                .foregroundColor(.black)
-                        }
-                )
             }
+            .padding()
+            .navigationTitle("Бронирование")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                leading:
+                    Button(action: {
+                        coordinator.navigateBack()
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor(.black)
+                    }
+            )
         }
-        .padding()
         .onAppear() {
             Task {
                 await bookingDetailViewModel.fetchBookingDetail()

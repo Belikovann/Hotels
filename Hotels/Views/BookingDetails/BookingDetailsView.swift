@@ -11,15 +11,7 @@ import SwiftUI
 
 struct BookingDetailsView: View {
     
-    let additionalDetails: [String: String] = [
-        "Bылет из" : "Санкт - Петербург",
-        "Страна, город" : "Египет",
-        "Даты": "19.09.2023-27.09.2023",
-        "Количество ночей": "7 ночей",
-        "Отель": "Steigenberger Makadi",
-        "Номер": "Стандартный с видом на бассейн или сад",
-        "Питание" : "Все включено"
-    ]
+    var additionalDetails: [String : String] = [:]
     
     var body: some View {
         VStack {
@@ -41,7 +33,15 @@ struct BookingDetailsView: View {
 
 struct BookingDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        BookingDetailsView()
+        BookingDetailsView(additionalDetails: [
+            "Bылет из" : "Санкт - Петербург",
+            "Страна, город" : "Египет",
+            "Даты": "19.09.2023-27.09.2023",
+            "Количество ночей": "7 ночей",
+            "Отель": "Steigenberger Makadi",
+            "Номер": "Стандартный с видом на бассейн или сад",
+            "Питание" : "Все включено"
+        ])
     }
 }
 
