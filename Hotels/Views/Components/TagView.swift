@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct TagView: View {
-    var descriptionTags = [
-        "Платный Wi-Fi в фойе",
-        "3-я линия",
-        "30 км до аэропорта",
-        "1 км до пляжа"
-    ]
+    var descriptionTags: [String] = []
     
     var body: some View {
         VStack(alignment: .leading) {
-            LazyVGrid(columns: [GridItem(.fixed(190)), GridItem(.fixed(170))], alignment: .leading) {
+            LazyVGrid(columns: [GridItem(.fixed(190)), GridItem(.fixed(190))], alignment: .leading) {
                             ForEach(descriptionTags, id: \.self) { tag in
                                 DescriptionTagView(descriptionTag: tag)
                             }
@@ -28,6 +23,12 @@ struct TagView: View {
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView()
+        TagView(descriptionTags: [
+            "Платный Wi-Fi в фойе",
+            "3-я линия",
+            "500 км до аэропорта",
+            "10 км до пляжа"
+        ]
+        )
     }
 }

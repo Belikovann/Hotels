@@ -8,61 +8,36 @@
 import SwiftUI
 
 struct HotelListView: View {
-
+    
     @EnvironmentObject var coordinator: Coordinator
     @StateObject private var hotelListViewModel = HotelListViewModel()
-
+    
     var body: some View {
         NavigationStack {
             
             if let hotel = hotelListViewModel.hotel {
-                  HotelCellView(hotel: hotel)
-                    .overlay {
-                        if hotelListViewModel.isLoading {
-                            ProgressView()
-                        }
+                ScrollView {
+                    HotelCellView(hotel: hotel)
+                    ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
+                        .padding()
+                }
+                .overlay {
+                    if hotelListViewModel.isLoading {
+                        ProgressView()
                     }
-             
-                    .navigationTitle("Отель")
-                    .navigationBarTitleDisplayMode(.inline)
-                
-                ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
-                    .padding()
-              } else {
-                  Text("Loading ...")
-                      .foregroundColor(.gray)
-              }
-            
-            
-//            HotelCellView(hotel: hotelListViewModel.hotel)
-//            //            List(hotelListViewModel.hotel) { hotel in
-//            //                        HotelCellView(hotel: hotel)
-//            //            }
-//            //            .listStyle(.plain)
-//                .overlay {
-//                    if hotelListViewModel.isLoading {
-//                        ProgressView()
-//                    }
-//                }
-//            //            .onAppear {
-//            //                if hotelListViewModel.hotel.isEmpty {
-//            //                    Task {
-//            //                        await hotelListViewModel.fetchHotel()
-//            //                    }
-//            //                }
-//            //            }
-//                .navigationTitle("Отель")
-//                .navigationBarTitleDisplayMode(.inline)
-            
-          
+                }
+                .navigationTitle("Отель")
+                .navigationBarTitleDisplayMode(.inline)
+            } else {
+                Text("Loading ...")
+                    .foregroundColor(.gray)
+            }
         }
         .onAppear {
             Task {
                 await hotelListViewModel.fetchHotel()
             }
         }
-        
-        
     }
 }
 

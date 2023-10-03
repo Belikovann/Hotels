@@ -11,16 +11,17 @@ struct HotelCellView: View {
     let hotel: Hotel
 
     var body: some View {
-        VStack{
+        VStack(alignment: .leading, spacing: 20){
             HotelGalleryView(hotel: hotel)
-            
-            VStack(alignment: .leading) {
                 RatingView()
                 NameAndAddressView(name: hotel.name, address: hotel.address)
                 PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
-            }
-            TagView()
-            AddDetailHotelView()
+            Text("Об отеле")
+                .font(.title2)
+            TagView(descriptionTags: hotel.aboutTheHotel.peculiarities)
+            Text("\(hotel.aboutTheHotel.description)")
+                .modifier(CustTextStyle(size: 16))
+            FacilitiesTableView()
         }
     }
 }
