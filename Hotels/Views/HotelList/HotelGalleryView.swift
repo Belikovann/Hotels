@@ -25,6 +25,7 @@ struct HotelGalleryView: View {
                 }
             }
         }
+        .frame(width: 365, height: 245)
         .tabViewStyle(PageTabViewStyle())
     }
 }

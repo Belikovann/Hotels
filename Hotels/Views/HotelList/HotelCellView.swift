@@ -22,6 +22,7 @@ struct HotelCellView: View {
                 .modifier(CustTextStyle(size: 16))
             FacilitiesTableView()
         }
+        .padding()
     }
 }
 

@@ -11,19 +11,20 @@ struct RatingView: View {
     var ratingName: String
     
     var body: some View {
-        ZStack(alignment: .center) {
-            Rectangle()
-                .foregroundColor(.orange)
-                .opacity(0.2)
-                .cornerRadius(10.0)
-                .frame(width: 180, height: 40)
             HStack {
                 Image(systemName: "star.fill")
                 Text("\(rating) \(ratingName)")
                     .modifier(CustTextStyle(size: 16))
             }
+            .padding()
             .foregroundColor(.orange)
-        }
+            .background(
+                        Rectangle()
+                            .foregroundColor(.orange)
+                            .opacity(0.2)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .cornerRadius(10)
+                    )
     }
 }
 
