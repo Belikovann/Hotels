@@ -39,6 +39,3 @@ struct RoomGalleryView_Previews: PreviewProvider {
 }
 
 
-
-
- 

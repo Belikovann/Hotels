@@ -15,8 +15,8 @@ struct RoomCellView: View {
     var body: some View {
         VStack(alignment: .center) {
             RoomGalleryView(room: room)
-                .frame(width: 343, height: 257)
-            VStack(alignment: .leading) {
+                .frame(width: 353, height: 257)
+            VStack(alignment: .leading, spacing: 15) {
                 Text(room.name)
                     .modifier(CustTextStyle(size: 22))
                 HStack {

@@ -226,9 +226,9 @@
 		C867E5692AC9F9FD007C68FF /* RoomList */ = {
 			isa = PBXGroup;
 			children = (
+				C867E5652AC9F9FD007C68FF /* RoomView.swift */,
 				C867E5542AC9F9FC007C68FF /* RoomViewModel.swift */,
 				C867E58E2AC9FDD9007C68FF /* RoomCellView.swift */,
-				C867E5652AC9F9FD007C68FF /* RoomView.swift */,
 				C8CF1A512ACA46FF008AB241 /* RoomGalleryView.swift */,
 			);
 			path = RoomList;

@@ -18,9 +18,11 @@ struct HotelListView: View {
             if let hotel = hotelListViewModel.hotel {
                 ScrollView {
                     HotelGalleryView(hotel: hotel)
+                    .frame(width: 365, height: 257)
                     HotelCellView(hotel: hotel)
                 }
                 .padding()
+
                 ButtonView(title: "Выбрать номер", action: {coordinator.navigateTo(screen: .rooms)})
                     .padding()
                     .overlay {

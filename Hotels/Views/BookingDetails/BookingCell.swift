@@ -15,13 +15,11 @@ struct BookingCell: View {
         VStack(alignment: .leading, spacing: 20) {
             RatingView()
             NameAndAddressView(name: booking.hotelName, address: booking.hotelAddress)
-            BookingDetailsView()
+//            BookingDetailsView()
             ClientView()
             TouristView(title: "Первый турист")
-            AddTouristButtonView()
+//            AddTouristButtonView()
             PayBlock(tourPrice: booking.tourPrice, fuelPrice: booking.fuelCharge, servicePrice: booking.serviceCharge)
-            ButtonView(title: "Оплатить \(booking.tourPrice + booking.serviceCharge + booking.fuelCharge) руб.") { coordinator.navigateTo(screen: .order)}
-            
         }
     }
 }

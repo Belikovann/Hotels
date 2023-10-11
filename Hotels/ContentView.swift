@@ -24,7 +24,7 @@ struct ContentView: View {
                 case .rooms:
                     RoomView()
                 case .booking:
-                    BookingView()
+                    BookingView(booking: Booking.example)
                 case .order:
                     OrderScreenView()
                 }

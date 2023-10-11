@@ -12,6 +12,7 @@ struct BookingView: View {
     @EnvironmentObject private var clientManager: ClientManager
     @EnvironmentObject var coordinator: Coordinator
     @StateObject var bookingDetailViewModel = BookingDetailViewModel()
+    let booking: Booking
     
     var body: some View {
         NavigationStack {
@@ -30,6 +31,7 @@ struct BookingView: View {
                     }
                 }
             }
+            ButtonView(title: "Оплатить \(booking.tourPrice + booking.serviceCharge + booking.fuelCharge) руб.") { coordinator.navigateTo(screen: .order)}
             .padding()
             .navigationTitle("Бронирование")
             .navigationBarTitleDisplayMode(.inline)
@@ -54,6 +56,6 @@ struct BookingView: View {
 
 struct BookingView_Previews: PreviewProvider {
     static var previews: some View {
-        BookingView()
+        BookingView(booking: Booking.example)
     }
 }

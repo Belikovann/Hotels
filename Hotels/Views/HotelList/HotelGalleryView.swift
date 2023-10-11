@@ -4,9 +4,6 @@
 //
 //  Created by Аня Беликова on 01.10.2023.
 //
-
-
-
 import SwiftUI
 
 struct HotelGalleryView: View {
@@ -26,7 +23,6 @@ struct HotelGalleryView: View {
                         ProgressView()
                     }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
         .tabViewStyle(PageTabViewStyle())
@@ -38,3 +34,4 @@ struct HotelGalleryView_Previews: PreviewProvider {
         HotelGalleryView(hotel: Hotel.example)
     }
 }
+
