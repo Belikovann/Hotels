@@ -12,7 +12,7 @@ struct HotelCellView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
-            RatingView()
+            RatingView(rating: hotel.rating, ratingName: hotel.ratingName)
             NameAndAddressView(name: hotel.name, address: hotel.address)
             PriceView(price: hotel.minimalPrice, priceForIt: hotel.priceForIt)
             Text("Об отеле")

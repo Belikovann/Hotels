@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct RatingView: View {
+    var rating: Int
+    var ratingName: String
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -17,7 +19,7 @@ struct RatingView: View {
                 .frame(width: 180, height: 40)
             HStack {
                 Image(systemName: "star.fill")
-                Text("5 Превосходно")
+                Text("\(rating) \(ratingName)")
                     .modifier(CustTextStyle(size: 16))
             }
             .foregroundColor(.orange)
@@ -27,6 +29,6 @@ struct RatingView: View {
 
 struct RatingView_Previews: PreviewProvider{
     static var previews: some View {
-        RatingView()
+        RatingView(rating: 5, ratingName: "норм")
     }
 }

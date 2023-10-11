@@ -13,7 +13,7 @@ struct BookingCell: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            RatingView()
+            RatingView(rating: booking.horating, ratingName: booking.ratingName)
             NameAndAddressView(name: booking.hotelName, address: booking.hotelAddress)
 //            BookingDetailsView()
             ClientView()
